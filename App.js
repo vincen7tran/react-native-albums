@@ -5,10 +5,7 @@ import Header from './src/components/Header';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Header />
-      <Text>Hi ba!</Text>
-    </View>
+    <Header />
   );
 };
 
