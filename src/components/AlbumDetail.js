@@ -1,12 +1,12 @@
 import React from 'react';
-import { Image, View, Text } from 'react-native';
+import { Image, View, Text, Linking } from 'react-native';
 
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
 
 const AlbumDetail = ({ album }) => {
-  const { title, artist, image } = album;
+  const { title, artist, image, url } = album;
   const thumbnail = 'http://newmediarockstars.com/wp-content/uploads/2015/06/TaylorSwift.png'
   const {
     headerContentStyle,
@@ -33,7 +33,7 @@ const AlbumDetail = ({ album }) => {
       </CardSection>
       
       <CardSection>
-        <Button />
+        <Button onPress={() => Linking.openURL(url)} />
       </CardSection>
     </Card>
   );
