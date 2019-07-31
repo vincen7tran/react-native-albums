@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+
+import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends React.Component {
   state = {
@@ -19,7 +21,7 @@ class AlbumList extends React.Component {
       const { title } = album;
 
       return (
-        <Text key={title}>{title}</Text>
+        <AlbumDetail key={title} album={album} />
       );
     });
   }
